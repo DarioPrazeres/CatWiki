@@ -1,0 +1,14 @@
+﻿*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-family: Montserrat;
+}
+h1{
+    font-family: 'Mystery Quest';
+}
+
