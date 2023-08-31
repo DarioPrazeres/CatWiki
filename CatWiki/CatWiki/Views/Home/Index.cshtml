@@ -1,8 +1,103 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿@model IEnumerable<CatWiki.Models.Breeds>
+
+@{
+    ViewBag.Title = "Index";
 }
 
+<h2>Index</h2>
 
-<div>
-    <h1>Cat Wiki</h1>
-</div>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.temperament)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.origin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.life_span)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adaptability)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.affection_level)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.child_friendly)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.grooming)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.intelligence)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.health_issues)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.social_needs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.stranger_friendly)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.temperament)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.origin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.life_span)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.adaptability)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.affection_level)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.child_friendly)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.grooming)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.intelligence)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.health_issues)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.social_needs)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.stranger_friendly)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.reference_image_id }) 
+        </td>
+    </tr>
+}
+
+</table>

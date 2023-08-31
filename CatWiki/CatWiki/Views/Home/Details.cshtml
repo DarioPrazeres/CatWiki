@@ -1,0 +1,54 @@
+﻿@model CatWiki.Models.Cat
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <img src="@Url.Content(@Model.Url)" width="250px" />
+        <dt>
+            @Html.DisplayNameFor(model => model.Url)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Url)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Width)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Width)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Height)
+        </dd>
+        <h1>@ViewBag.ImageArray</h1>
+        @for (int i = 0; i < ViewBag.Breeds.ToArray().Length; i++)
+        {
+            @ViewBag.Breeds[i].name
+            @ViewBag.Breeds[i].description
+        }
+        <p><strong>>imanges</strong></p>
+        @for (int i = 0; i < ViewBag.ImageArray.ToArray().Length; i++)
+        {
+            <img src="@Url.Content(@ViewBag.ImageArray[i].url)" width="278px" height="278px" />
+        }
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
