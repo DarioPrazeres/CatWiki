@@ -1,0 +1,73 @@
+﻿/*------------Detail Cat ---------*/
+.detail-cat{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 30% 50%;
+    gap: 30px;
+}
+h3{
+    color: #291507;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.detail-description p{
+    margin-bottom: 10px;
+}
+.detail-cat .photo-perfil img {
+    width: 300px;
+    height: 300px;
+    border-radius: 24px;
+    margin-left: 50px;
+}
+.level {
+    width: 512px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.level strong{
+    width: 180px;
+    font-size: 18px;
+}
+.level-div{
+    display: flex;
+    justify-content: space-evenly;
+}
+.block-level, .block-level-empty {
+    margin-left: 10px;
+    border-radius: 8px;
+    width: 50px;
+    height: 12px;
+    background: #544439;
+}
+.block-level-empty {
+    background: #E0E0E0;
+}
+#number{
+    display: none;
+}
+/*---------------Others Photos -------*/
+.other-photos{
+    padding-top: 10px;
+    margin-bottom: 60px;
+}
+.photos-cat {
+    margin-top: 15px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 278px);
+    grid-template-rows: repeat(2, 278px);
+    gap: 20px;
+}
+.photos-cat div{
+    border-radius: 24px;
+}
+.photos-cat div img{
+    width: 278px;
+    height: 278px;
+    border-radius: 24px;
+}

@@ -3,52 +3,79 @@
 @{
     ViewBag.Title = "Details";
 }
+<link rel="stylesheet" href="~/Content/Detail.css" />
 
-<h2>Details</h2>
-
-<div>
-    <h4>Cat</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <img src="@Url.Content(@Model.Url)" width="250px" />
-        <dt>
-            @Html.DisplayNameFor(model => model.Url)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Url)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Width)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Width)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Height)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Height)
-        </dd>
-        <h1>@ViewBag.ImageArray</h1>
+<div class="detail-cat">
+    <div class="photo-perfil">
+        <img src="@Url.Content(@Model.Url)" />
+    </div>
+    <div class="detail-description">
         @for (int i = 0; i < ViewBag.Breeds.ToArray().Length; i++)
         {
-            @ViewBag.Breeds[i].name
-            @ViewBag.Breeds[i].description
+            <h3>@ViewBag.Breeds[i].name</h3>
+            <p>@ViewBag.Breeds[i].description</p>
+            <p><strong>Temperament:</strong>@ViewBag.Breeds[i].temperament</p>
+            <p><strong>Origin: </strong>@ViewBag.Breeds[i].origin</p>
+            <p><strong>Life Span: </strong>@ViewBag.Breeds[i].life_span</p>
+            <div class="level">
+                <p id="number">@ViewBag.Breeds[i].adaptability</p>
+                <strong>Adaptability:</strong>
+                <div class="level-div" id="level-id">
+                </div>
+            </div>
+            <div class="level">
+                <p id="number">@ViewBag.Breeds[i].affection_level</p>
+                <strong>Affection level:</strong>
+                <div class="level-div" id="level-id">
+                </div>
+            </div>
+            <div class="level">
+                <p id="number">@ViewBag.Breeds[i].child_friendly</p>
+                <strong>Child Friendly:</strong>
+                <div class="level-div" id="level-id">
+                </div>
+            </div>
+            <div class="level">
+                <p id="number">@ViewBag.Breeds[i].grooming</p>
+                <strong>Grooming:</strong>
+                <div class="level-div" id="level-id">
+                </div>
+            </div>
+            <div class="level">
+                <p id="number">@ViewBag.Breeds[i].intelligence</p>
+                <strong>Intelligence:</strong>
+                <div class="level-div" id="level-id">
+                </div>
+            </div>
+            <div class="level">
+                <p id="number">@ViewBag.Breeds[i].health_issues</p>
+                <strong>Health issues:</strong>
+                <div class="level-div" id="level-id">
+                </div>
+            </div>
+            <div class="level">
+                <p id="number">@ViewBag.Breeds[i].social_needs</p>
+                <strong>Social needs:</strong>
+                <div class="level-div" id="level-id">
+                </div>
+            </div>
+            <div class="level">
+                <p id="number">@ViewBag.Breeds[i].stranger_friendly</p>
+                <strong>Stranger friendly:</strong>
+                <div class="level-div" id="level-id">
+                </div>
+            </div>
         }
-        <p><strong>>imanges</strong></p>
-        @for (int i = 0; i < ViewBag.ImageArray.ToArray().Length; i++)
-        {
-            <img src="@Url.Content(@ViewBag.ImageArray[i].url)" width="278px" height="278px" />
-        }
-
-    </dl>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<div class="other-photos">
+    <h3>Other photos</h3>
+    <div class="photos-cat">
+        @for (int i = 0; i < 8; i++)
+        {
+            <div>
+                <img src="@Url.Content(@ViewBag.ImageArray[i].url)" />
+            </div>
+        }
+    </div>
+</div>

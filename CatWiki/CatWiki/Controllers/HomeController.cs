@@ -7,8 +7,6 @@ using System.Web;
 using System.Web.Mvc;
 using CatWiki.Models;
 using Newtonsoft.Json.Linq;
-using PagedList;
-using PagedList.Mvc;
 
 namespace CatWiki.Controllers
 {
@@ -23,9 +21,9 @@ namespace CatWiki.Controllers
             _httpClient.BaseAddress = new Uri("https://api.thecatapi.com/v1/images/");
             _httpClientImages.BaseAddress = new Uri("https://api.thecatapi.com/v1/images/search?limit=8&");
         }
-        public async Task<ActionResult> Index(int? numPag, int qtdItens = 10, string ordenarPor = "Decrescente", string pesq = "")
+        public /*async Task<ActionResult>*/ ActionResult Index()
         {
-            _httpClient.BaseAddress = new Uri("https://api.thecatapi.com/v1/");
+            /*_httpClient.BaseAddress = new Uri("https://api.thecatapi.com/v1/");
             HttpResponseMessage response = await _httpClient.GetAsync("breeds");
             if (response.IsSuccessStatusCode)
             {
@@ -43,11 +41,12 @@ namespace CatWiki.Controllers
             else
             {
                 return View("Error");
-            }
+            }*/
+            return View();
         }
         public async Task<ActionResult> Details(string id)
         {
-            HttpResponseMessage response = await _httpClient.GetAsync(id);
+            HttpResponseMessage response = await _httpClient.GetAsync("0XYvRd7oD");
             if (response.IsSuccessStatusCode)
             {
                 string IdBreeds = "";
@@ -70,8 +69,8 @@ namespace CatWiki.Controllers
                         string UrlImage = Image.url;
                     }
                     ViewBag.ImageArray = Images;
-                }                
-                ViewBag.Breeds = catApiResponse.Breeds;                
+                }
+                ViewBag.Breeds = catApiResponse.Breeds;
                 return View(catApiResponse);
             }
             else

@@ -4,100 +4,96 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.temperament)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.origin)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.life_span)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.adaptability)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.affection_level)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.child_friendly)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.grooming)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.intelligence)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.health_issues)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.social_needs)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.stranger_friendly)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.temperament)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.origin)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.life_span)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.adaptability)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.affection_level)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.child_friendly)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.grooming)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.intelligence)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.health_issues)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.social_needs)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.stranger_friendly)
-        </td>
-        <td>
-            @Html.ActionLink("Details", "Details", new { id=item.reference_image_id }) 
-        </td>
-    </tr>
-}
-
-</table>
+<div class="searchSection">
+    <div class="introduce">
+        <img src="~/assets/CatwikiLogoWhite.svg" />
+        <p>Get to know more about your <br /> cat breed</p>
+        <div class="search">
+            <input type="text" id="pesquisaInput" placeholder="Enter your breed" oninput="realizarPesquisa()"/>
+            <img src="~/assets/search.png" class="imgSearch" />
+        </div>
+        <div class="results">
+            <div id="resultadoPesquisa">
+                <a href="/Home/Details/id">
+                    <p class="id-details">joao</p>
+                    <p class="name-cat">
+                        João
+                    </p>
+                </a>
+                <a href="/Home/Details/id">
+                    <p class="id-details">Maria</p>
+                    <p class="name-cat">
+                        Maria
+                    </p>
+                </a>
+                <a href="/Home/Details/id">
+                    <p class="id-details">pedro</p>
+                    <p class="name-cat">
+                        Pedro
+                    </p>
+                </a>
+                <a href="/Home/Details/id">
+                    <p class="id-details">Dario</p>
+                    <p class="name-cat">
+                        Dario
+                    </p>
+                </a>
+                <a href="/Home/Details/id">
+                    <p class="id-details">Carina</p>
+                    <p class="name-cat">
+                        Carina
+                    </p>
+                </a>
+                <a href="/Home/Details/id">
+                    <p class="id-details">Baptista</p>
+                    <p class="name-cat">
+                        Baptista
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="most-breeds">
+    <div class="discover-more">
+        <h6>Most Searched Breeds</h6>
+        <hr />
+        <h2>66+ Breeds For you<br /> to discover</h2>
+        <a class="see-more" href="/Home/list" >SEE MORE <img src="~/assets/seta-direita.png" /></a>
+    </div>
+    <div class="breeds-data">
+        <di class="breed-description">
+            <a href="/Home/Details">
+                <img src="~/assets/image-2.png" />
+                <h5>Bengal</h5>
+            </a>
+        </di>
+        <di class="breed-description">
+            <img src="~/assets/image-2.png" />
+            <h5>Bengal</h5>
+        </di>
+        <di class="breed-description">
+            <img src="~/assets/image-2.png" />
+            <h5>Bengal</h5>
+        </di>
+        <di class="breed-description">
+            <img src="~/assets/image-2.png" />
+            <h5>Bengal</h5>
+        </di>
+    </div>
+</div>
+<div class="have-cat">
+    <div class="why-cat">
+        <hr />
+        <h2>Why should you have a cat?</h2>
+        <p>Having a cat around you can actually trigger the release of calming chemicals in your body which lower your stress and anxiety leves</p>
+        <a href="https://www.wondercide.com/blogs/thewonderside-pets-family/20-reasons-why-you-should-adopt-a-cat">READ MORE <span class="icon-seta"></span></a>
+    </div>
+    <div class="image-Cat">
+        <div class="image-Cat-first">
+            <img src="~/assets/image-2.png" width="273" />
+            <img src="~/assets/image-1.png" width="195" class="right-image" />
+        </div>
+        <div><img src="~/assets/image-3.png" width="195" height="385" /></div>
+    </div>
+</div>

@@ -138,18 +138,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\CatwikiLogo.svg" />
+    <Content Include="assets\CatwikiLogoWhite.svg" />
     <Content Include="assets\HeroImagelg.png" />
     <Content Include="assets\HeroImagemd.png" />
     <Content Include="assets\HeroImagesm.png" />
-    <Content Include="assets\image 1.png" />
-    <Content Include="assets\image 2.png" />
-    <Content Include="assets\image 3.png" />
+    <Content Include="assets\image-1.png" />
+    <Content Include="assets\image-2.png" />
+    <Content Include="assets\image-3.png" />
+    <Content Include="assets\search.png" />
+    <Content Include="assets\seta-direita.png" />
+    <Content Include="Content\Detail.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Script.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
