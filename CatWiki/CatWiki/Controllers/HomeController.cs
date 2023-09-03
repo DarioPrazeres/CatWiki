@@ -21,9 +21,9 @@ namespace CatWiki.Controllers
             _httpClient.BaseAddress = new Uri("https://api.thecatapi.com/v1/images/");
             _httpClientImages.BaseAddress = new Uri("https://api.thecatapi.com/v1/images/search?limit=8&");
         }
-        public /*async Task<ActionResult>*/ ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            /*_httpClient.BaseAddress = new Uri("https://api.thecatapi.com/v1/");
+            _httpClient.BaseAddress = new Uri("https://api.thecatapi.com/v1/");
             HttpResponseMessage response = await _httpClient.GetAsync("breeds");
             if (response.IsSuccessStatusCode)
             {
@@ -35,18 +35,16 @@ namespace CatWiki.Controllers
                     string imperialWeight = breed.Weight.Imperial;
                     string metricWeight = breed.Weight.Metric;
                     string breedName = breed.name;
+
                 }
+
                 return View(breeds);
             }
-            else
-            {
-                return View("Error");
-            }*/
-            return View();
+            return View("Error");            
         }
         public async Task<ActionResult> Details(string id)
         {
-            HttpResponseMessage response = await _httpClient.GetAsync("0XYvRd7oD");
+            HttpResponseMessage response = await _httpClient.GetAsync(id);
             if (response.IsSuccessStatusCode)
             {
                 string IdBreeds = "";
@@ -77,7 +75,6 @@ namespace CatWiki.Controllers
             {
                 return View("Error");
             }
-            //Search more 8 Photos //https://api.thecatapi.com/v1/images/search?limit=8&breed_ids=beng
         }
 
     }

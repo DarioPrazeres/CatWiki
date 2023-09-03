@@ -14,7 +14,7 @@
         {
             <h3>@ViewBag.Breeds[i].name</h3>
             <p>@ViewBag.Breeds[i].description</p>
-            <p><strong>Temperament:</strong>@ViewBag.Breeds[i].temperament</p>
+            <p><strong>Temperament: </strong>@ViewBag.Breeds[i].temperament</p>
             <p><strong>Origin: </strong>@ViewBag.Breeds[i].origin</p>
             <p><strong>Life Span: </strong>@ViewBag.Breeds[i].life_span</p>
             <div class="level">
@@ -71,7 +71,7 @@
 <div class="other-photos">
     <h3>Other photos</h3>
     <div class="photos-cat">
-        @for (int i = 0; i < 8; i++)
+        @for (int i = 0; i < 4; i++)
         {
             <div>
                 <img src="@Url.Content(@ViewBag.ImageArray[i].url)" />
@@ -79,3 +79,4 @@
         }
     </div>
 </div>
+<script src="~/Scripts/Details.js"></script>

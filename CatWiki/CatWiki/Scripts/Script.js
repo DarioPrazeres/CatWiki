@@ -1,21 +1,4 @@
-﻿function createBlockLevel() {
-    var LevelValue = document.querySelectorAll('p#number');
-    console.log(LevelValue.length)
-    var LevelSection = document.querySelectorAll('div.level');
-    for (let count = 0; count <= LevelSection.length; count++) {
-        for (let i = 1; i <= 5; i++) {
-            var blockLevel = document.createElement('div');
-            blockLevel.classList.add('block-level-empty');
-            if (LevelValue[count].textContent - i >= 0) {
-                blockLevel.classList.remove('block-level-empty')
-                blockLevel.classList.add('block-level');
-            }
-            LevelSection[count].appendChild(blockLevel);
-        }
-    }
-
-   
-}
+﻿
 var nomes = document.querySelectorAll('p.name-cat');
 var idValues = document.querySelectorAll('p.id-details');
 
@@ -31,10 +14,9 @@ function realizarPesquisa() {
         var nome = nomes[i].textContent.toLowerCase();
         if (nome.includes(valorPesquisa)) {
             resultados.push(nomes[i].textContent);
-            idResults.push(idValues[i].textContent)
-        }
+            idResults[i] = idValues[i].textContent;
+        }        
     }
-
     exibirResultados(resultados, idResults);
 }
 
@@ -42,7 +24,7 @@ function exibirResultados(resultados, id) {
     var listaResultado = document.getElementById("resultadoPesquisa");
     listaResultado.innerHTML = "";
 
-    resultados.forEach(function (resultado) {
+    resultados.forEach(function (resultado, index) {
         var itemLink = document.createElement('a');
         var idValue = document.createElement('p');
         var itemLista = document.createElement("p");
@@ -50,14 +32,24 @@ function exibirResultados(resultados, id) {
         idValue.classList.add('id-details');
         itemLista.classList.add('name-cat');
 
-        itemLink.href = '/Home/Details/' + id;
-
+        itemLink.href = `/Home/Details/${id[index]}`;
+        console.log
         itemLista.textContent = resultado;
-        idValue.textContent = id;
+        idValue.textContent = id[index];
 
         itemLink.appendChild(idValue);
         itemLink.appendChild(itemLista);
         listaResultado.appendChild(itemLink);
     });
 }
-createBlockLevel();
+function createLinkImage() {
+    var referenceImage = document.querySelectorAll('.image-id-cat');
+    var imageLink = document.querySelectorAll('img.image-cat-link');
+    //https://cdn2.thecatapi.com/images/
+    for (let i = 0; i < 4; i++) {
+        //console.log(referenceImage[i].textContent);
+        imageLink[i].src = "https://cdn2.thecatapi.com/images/" + referenceImage[i].textContent.toString() + ".jpg"
+        console.log(imageLink[i]);
+    }
+}
+createLinkImage()

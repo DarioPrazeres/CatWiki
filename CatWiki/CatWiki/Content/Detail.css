@@ -60,7 +60,7 @@ h3{
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(4, 278px);
-    grid-template-rows: repeat(2, 278px);
+    grid-template-rows: repeat(1, 278px);
     gap: 20px;
 }
 .photos-cat div{

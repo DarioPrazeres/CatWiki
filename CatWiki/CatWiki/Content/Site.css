@@ -224,9 +224,13 @@ header{
 .breed-description a{
     text-decoration: none;
 }
-.breeds-data .breed-description img{
+.breeds-data .breed-description img {
+    border-radius: 24px;
     width: 240px;
     height: 240px;
+}
+.image-id-cat{
+    display: none;
 }
 /*---------Footer ---------*/
 footer {
