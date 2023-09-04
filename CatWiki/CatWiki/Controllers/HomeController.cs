@@ -76,6 +76,25 @@ namespace CatWiki.Controllers
                 return View("Error");
             }
         }
+        public async Task<ActionResult> List()
+        {
+            _httpClient.BaseAddress = new Uri("https://api.thecatapi.com/v1/");
+            HttpResponseMessage response = await _httpClient.GetAsync("breeds");
+            if (response.IsSuccessStatusCode)
+            {
+                var data = await response.Content.ReadAsStringAsync();
+                var breeds = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Breeds>>(data);
 
+                foreach (var breed in breeds)
+                {
+                    string imperialWeight = breed.Weight.Imperial;
+                    string metricWeight = breed.Weight.Metric;
+                    string breedName = breed.name;
+                }
+
+                return View(breeds);
+            }
+            return View("Error");
+        }
     }
 }

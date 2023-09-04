@@ -1,0 +1,26 @@
+﻿@model IEnumerable<CatWiki.Models.Breeds>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<link rel="stylesheet" href="~/Content/StyleList.css" />
+<h3>Top 10 most searched breeds</h3>
+
+<div class="most-searched">
+    @for (int count = 1; count <= 10; count++)
+    {
+        <div class="element-most">
+            <div class="photo-cat-most">
+                <p class="image-id-cat">@Model.ToArray()[count].reference_image_id</p>
+                <img class="image-cat-link" src="" />
+            </div>
+            <div class="photo-description">
+                <h3>@count .  @Model.ToArray()[count].name</h3>
+                <p>@Model.ToArray()[count].description</p>
+            </div>
+        </div>
+    }
+</div>
+
+<script src="~/Scripts/List.js"></script>

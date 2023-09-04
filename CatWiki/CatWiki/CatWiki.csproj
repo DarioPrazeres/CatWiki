@@ -149,11 +149,13 @@
     <Content Include="assets\seta-direita.png" />
     <Content Include="Content\Detail.css" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="Content\StyleList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\Details.js" />
+    <Content Include="Scripts\List.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\Script.js" />
     <Content Include="Web.config" />
@@ -179,6 +181,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Home\List.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
