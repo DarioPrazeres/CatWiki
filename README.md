@@ -11,6 +11,7 @@
       <a href="http://myunsplash.somee.com/">
       Demo
     </a>
+     <span> | </span>
     <a href="https://github.com/DarioPrazeres/CatWiki">
       Solution
     </a>
