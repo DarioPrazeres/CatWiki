@@ -11,11 +11,11 @@
       <a href="http://myunsplash.somee.com/">
       Demo
     </a>
-    <a href="https://github.com/DarioPrazeres/MyUnspplash">
+    <a href="https://github.com/DarioPrazeres/CatWiki">
       Solution
     </a>
     <span> | </span>
-    <a href="https://devchallenges.io/challenges/rYyhwJAxMfES5jNQ9YsP">
+    <a href="https://devchallenges.io/challenges/f4NJ53rcfgrP6sBMD2jt">
       Challenge
     </a>
   </h3>
@@ -35,9 +35,9 @@
 
 ## Overview
 
-![screenshot](https://github.com/DarioPrazeres/MyUnspplash/blob/main/Banner.png)
+![screenshot](https://github.com/DarioPrazeres/CatWiki/blob/main/Banner.png)
 
-This project is a basic a Unsplash Website where you can save your favorite images and see later, so you delete one and search images by label.
+This project is a Cat Wikipedia with more than 66 breeds cat, and the project show photos about cats and descriptions and skills. The data is provide for CatApi 
 
 ### Built With
 
@@ -46,7 +46,7 @@ This project is a basic a Unsplash Website where you can save your favorite imag
 - [ASP.NET](https://dotnet.microsoft.com/en-us/apps/aspnet)
 - [JavaScript](https://www.javascript.com/)
 - [HTML & CSS](https://www.w3schools.com/html/html_css.asp)
-- [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [CatApi](https://developers.thecatapi.com/)
 
 ## Features
 
@@ -54,11 +54,14 @@ This project is a basic a Unsplash Website where you can save your favorite imag
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/O2iGT9yBd6xZBrOcVirx) was to build an application to complete the given user stories.
 
-User story: I can see a list of photos in the masonry layout that I have added
-User story: I can add a new photo to the list - the new photo should be on top of the list
-User story: I can search for photos by label
-User story: When I hover a photo, I can see a label and a delete button
-User story: I can delete images
+User story: I can search for cat breeds and select a breed of my choice
+User story: I can see the most popular searched cat breeds summary on the homepage
+User story: I can see the top 10 most searched cat breeds
+User story: I can see the breed details including description, temperament, origin, life span, adaptability, affection level, child-friendly, grooming, intelligence, health issues, social needs, stranger friendly
+User story: I can see more photo of the breed
+User story: On mobile, when I select the search option, a modal for breed search should pop up
+User story (optional): I can go to an article about cats when I click read more on Why you should have a cat section
+User story (optional): I can go to the top 10 cats by clicking see more in the dashboard
 
 ## How To Use
 
@@ -68,10 +71,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [A
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/DarioPrazeres/uploadingImgDotNet
+$ git clone https://github.com/DarioPrazeres/CatWiki
 
 # Install dependencies
-$ Only Execute the UploadingImg.sln
+$ Only Execute the CatWiki.sln
 
 
 ```
