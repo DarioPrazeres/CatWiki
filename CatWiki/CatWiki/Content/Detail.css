@@ -71,3 +71,35 @@ h3{
     height: 278px;
     border-radius: 24px;
 }
+
+@media only screen and (max-width: 768px) {
+    h3 {
+        font-size: 24px;
+    }
+    .detail-cat {
+        grid-template-columns: 95%;
+    }
+    .detail-cat .photo-perfil img {
+        margin-left: 0px;
+    }
+    .level {
+        width: 95%;
+    }
+    .photos-cat {
+        grid-template-columns: repeat(2, 150px);
+        grid-template-rows: repeat(2, 150px);
+    }
+    .block-level, .block-level-empty {
+        margin-left: 5px;
+        width: 25px;
+    }
+    .level strong {
+        font-size: 14px;
+        width: 150px;
+    }
+    .photos-cat div img {
+        width: 140px;
+        height: 148px;
+        border-radius: 12px;
+    }
+}

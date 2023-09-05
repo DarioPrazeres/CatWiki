@@ -1,5 +1,4 @@
-﻿
-var nomes = document.querySelectorAll('p.name-cat');
+﻿var nomes = document.querySelectorAll('p.name-cat');
 var idValues = document.querySelectorAll('p.id-details');
 
 function realizarPesquisa() {
@@ -47,9 +46,7 @@ function createLinkImage() {
     var imageLink = document.querySelectorAll('img.image-cat-link');
     //https://cdn2.thecatapi.com/images/
     for (let i = 0; i < 4; i++) {
-        //console.log(referenceImage[i].textContent);
-        imageLink[i].src = "https://cdn2.thecatapi.com/images/" + referenceImage[i].textContent.toString() + ".jpg"
-        console.log(imageLink[i]);
+        imageLink[i].src = "https://cdn2.thecatapi.com/images/" + referenceImage[i].textContent.toString() + ".jpg";
     }
 }
 createLinkImage()

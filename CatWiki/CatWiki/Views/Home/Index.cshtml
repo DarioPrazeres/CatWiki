@@ -28,25 +28,26 @@
     </div>
 </div>
 <div class="most-breeds">
-    <div class="discover-more">
-        <h6>Most Searched Breeds</h6>
-        <hr />
-        <h2>66+ Breeds For you<br /> to discover</h2>
-        <a class="see-more" href="/Home/list">SEE MORE <img src="~/assets/seta-direita.png" /></a>
-    </div>
-    <div class="breeds-data">
-        @for(int count = 0; count < 4; count++)
+     <div class="discover-more">
+          <h6>Most Searched Breeds</h6>
+          <hr />
+          <h2>66+ Breeds For you<br /> to discover</h2>
+          <a class="see-more" href="/Home/list">SEE MORE <img src="~/assets/seta-direita.png" /></a>
+     </div>
+     <div class="breeds-data">
+           @for(int count = 0; count < 4; count++)
             {
-                <div class="breed-description">
-                    <p class="image-id-cat">@Model.ToArray()[count].reference_image_id</p>
-                    <a class="a-im" href="/Home/Details/@Model.ToArray()[count].reference_image_id">
+               <div class="breed-description">
+                  <p class="image-id-cat">@Model.ToArray()[count].reference_image_id</p>
+                   <a class="a-im" href="/Home/Details/@Model.ToArray()[count].reference_image_id">
                         <img class="image-cat-link" src="" />
                         <h5>@Model.ToArray()[count].name</h5>
-                    </a>
-                </div>
+                   </a>
+               </div>
             }
-    </div>
+     </div>
 </div>
+
 <div class="have-cat">
     <div class="why-cat">
         <hr />
@@ -56,10 +57,10 @@
     </div>
     <div class="image-Cat">
         <div class="image-Cat-first">
-            <img src="~/assets/image-2.png" width="273" />
-            <img src="~/assets/image-1.png" width="195" class="right-image" />
+            <img class="image-2" src="~/assets/image-2.png" width="273" />
+            <img  src="~/assets/image-1.png" width="195" class="right-image image-1" />
         </div>
-        <div><img src="~/assets/image-3.png" width="195" height="385" /></div>
+        <div><img class="image-3" src="~/assets/image-3.png" width="195" height="385" /></div>
     </div>
 </div>
 
