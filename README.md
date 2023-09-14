@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-      <a href="http://myunsplash.somee.com/">
+      <a href="http://catwiki.somee.com/">
       Demo
     </a>
      <span> | </span>
